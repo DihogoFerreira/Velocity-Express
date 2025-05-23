@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="imagens/logo2.png" alt="Velocity Express">
+                    <div class="logo-text">Velocity<span>Express</span></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#mvv">Quem Somos</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="about" class="about-section fade-in">
+        <div class="container">
+            <h2 style="color: #00aaff; text-decoration: underline;">
+                Nossa História</h2><br>
+            <p>
+                Tudo começou no ano de 2015 quando Eduardo Claus, decidiu largar o seu serviço de Auxiliar
+                Administrativo,insatisfeito com o salário que recebia e a grande demanda de trabalho. <br>
+                Ele decidiu comprar uma moto e começar a trabalhar de motoboy fazendo entrega para uma lanchonete na
+                cidade de Juiz de Fora-Mg .
+            </p>
+            <p>Não demorou muito e Eduardo começou fazer amigos na pista. Sempre disposto a ajudar o próximo e com mente
+                de
+                empreendedor,
+                começou a indicar um ou outro motoboy sobre aonde estava contratando, até que um dia um dos donos de uma
+                Lanchonete
+                em que o mesmo trabalhava, identificou o seu potencial de liderança, organização e gerência e o colocou
+                como responsável pelos motoboys ele gostou da idéia dali em diante
+                montou seu próprio time.<br>
+                E hoje tem sua empresa prestadora de serviços de moto entrega Velocity Express.<br>
+                Com foco em agilidade, eficiência, segurança e compromisso com o cliente, crescemos com base na
+                confiança
+                e na inovação.
+            </p>
+        </div>
+    </section>
+    <section id="mvv" class="mvv-section">
+        <div class="container">
+            <div class="card-container">
+                <div class="card missao">
+
+                    <h2>Missão </h2><img src="imagens/icons8-objetivo.gif"><br><br><br><br>
+                    <p>Oferecer soluções logísticas ágeis e eficientes por meio de
+                        um transporte rápido, seguro e confiável, com foco na qualidade do atendimento e na experiência
+                        do cliente.</p>
+                </div>
+                <div class="card visao">
+                    <h2>Visão</h2><img src="imagens/icons8-eye-50.png" width="40"><br><br><br>
+                    <p>Consolidar-se entre as empresas mais reconhecidas por qualidade e eficiência em Juiz de Fora até
+                        2030,
+                        tornando-se referência em entregas expressas na cidade e região até 2040,
+                        sempre atuando com responsabilidade no trânsito, respeito ao meio ambiente e valorização das
+                        pessoas envolvidas.
+                    </p>
+                </div>
+                <div class="card valores">
+                    <h2>Valores</h2><img src="imagens/icons8-scales.gif"><br><br>
+                    <p>Alguns dos nosso Valores são:<br><br> Agilidade <br> Segurança <br> Confiança
+                        <br> Foco no Cliente
+                        <br> Respeito<br> Honestidade <br>Transparência
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-fixed">
+        <p>Desenvolvido por Falcon Dev.Systems</p>
+        <p>&copy; 2025 Velocity Express. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            header.classList.toggle("scrolled", window.scrollY > 50);
+        });
+    </script>
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        faders.forEach(fade => observer.observe(fade));
+    </script>
+
+
+</body>
+
+</html>
